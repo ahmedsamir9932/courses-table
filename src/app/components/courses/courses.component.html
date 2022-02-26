@@ -2,16 +2,16 @@
     <div class="row mb-2">
     </div>
     <div class="row">
-        <div class="col-md-2" *ngFor="let course of courses | async">
+        <div class="col-md-3" *ngFor="let course of courses | async">
             <div class="card">
                 <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png" 
                 class="card-img-top"
                 alt="Student">
                 <div class="card-body">
-                  <h5 class="card-title text-center"> Title: {{ course.name }} </h5>
-                  <h3 class="card-title text-center"> Created Date: {{ course.createdDate }} </h3>
-                  <h3 class="card-title text-center"> Start Date: {{ course.startDate }} </h3>
-                  <h3 class="card-title text-center"> End Date: {{ course.endDate }} </h3>
+                  <h2 class="card-title text-center"> Title: {{ course.name }} </h2>
+                  <h6 class="card-title text-center"> Created Date: {{ course.createdDate }} </h6>
+                  <h6 class="card-title text-center"> Start Date: {{ course.startDate }} </h6>
+                  <h6 class="card-title text-center"> End Date: {{ course.endDate }} </h6>
                   <p class="card-text"></p>
                 </div>
               </div>
