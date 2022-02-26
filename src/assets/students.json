@@ -1,0 +1,8 @@
+
+
+[
+    {"studentId": "100", "name": "Ahmed", "grade": "one", "coursesId": ["1","3"]},
+    {"studentId": "101", "name": "Mohamed", "grade": "two", "coursesId": ["2","4"]},
+    {"studentId": "102", "name": "Ali", "grade": "thhree", "coursesId": ["1"]},
+    {"studentId": "103", "name": "Essam", "grade": "four", "coursesId": ["4"]}
+]

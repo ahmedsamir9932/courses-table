@@ -1,0 +1,19 @@
+
+    <div class="row mb-2">
+    </div>
+    <div class="row">
+        <div class="col-md-2" *ngFor="let course of courses | async">
+            <div class="card">
+                <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png" 
+                class="card-img-top"
+                alt="Student">
+                <div class="card-body">
+                  <h5 class="card-title text-center"> Title: {{ course.name }} </h5>
+                  <h5 class="card-title text-center"> Created Date: {{ course.createdDate }} </h5>
+                  <h5 class="card-title text-center"> Start Date: {{ course.startDate }} </h5>
+                  <h5 class="card-title text-center"> End Date: {{ course.endDate }} </h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+        </div>
+    </div>

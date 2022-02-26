@@ -1,0 +1,52 @@
+<h1 mat-dialog-title class="text-center">{{ editMode ? 'Edit Student' : 'Add Student' }}</h1>
+<div mat-dialog-content style="height: 230px;">
+    <form [formGroup]="studentForm" (ngSubmit)="submitForm()">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field  appearance="outline">
+                    <mat-label>Student Name</mat-label>
+                    <input type="text" matInput placeholder="student name" formControlName="name">
+                    <mat-error *ngIf="studentForm?.get('name')?.hasError('required')">
+                      Student Name is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="studentForm?.get('name')?.hasError('maxlength')">
+                      max length is 20 characters
+                    </mat-error>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field  appearance="outline">
+                    <mat-label>Student Grade</mat-label>
+                    <input type="text" matInput placeholder="student grade" formControlName="grade">
+                    <mat-error *ngIf="studentForm?.get('grade')?.hasError('required')">
+                      Student Grade is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="studentForm?.get('grade')?.hasError('maxlength')">
+                      max length is 40 characters
+                    </mat-error>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Courses</mat-label>
+                    <mat-select multiple formControlName="coursesId">
+                      <mat-option *ngFor="let course of courses$ | async" [value]="course.courseId">
+                        {{ course.name }}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="studentForm?.get('coursesId')?.hasError('required')">
+                        Courses is <strong>required</strong>
+                      </mat-error>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div mat-dialog-actions>
+                <button mat-button mat-button mat-dialog-close class="d-inline-block btn btn-danger me-2 ms-3" type="button">cancel</button>
+                <button mat-button class="btn btn-success" type="submit" [disabled]="!studentForm.valid">save</button>
+              </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,8 @@
+
+
+[
+    {"courseId": "1", "name": "HTML", "createdDate": "1-7-2020", "startDate": "1-8-2018", "endDate": "1-9-2018"},
+    {"courseId": "2", "name": "CSS", "createdDate": "1-7-2020", "startDate": "1-8-2019", "endDate": "1-9-2019"},
+    {"courseId": "3", "name": "javaScript", "createdDate": "1-7-2020", "startDate": "1-8-2020", "endDate": "1-9-2020"},
+    {"courseId": "4", "name": "Angular", "createdDate": "1-7-2020", "startDate": "1-8-2021", "endDate": "1-9-2021"}
+]
