@@ -5,6 +5,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StudentsComponent } from './components/students/students.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/students'},
   { path: 'students', component: StudentsComponent },
   { path: 'courses', component: CoursesComponent },
   { path: '**', component: NotFoundComponent }
